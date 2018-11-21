@@ -11,5 +11,7 @@
 #include <cmath>
 
 #include "Consola.h"
+#include "Mapa.h"
+#include "config.h"
 
 using namespace std;

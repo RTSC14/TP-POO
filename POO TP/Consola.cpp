@@ -15,7 +15,8 @@ Nov 2018 - Pequenos melhoramentos nos comentários
 
 /* --> ver comentários em consola.h */
 
-#include "consola.h"                      
+#include "consola.h" 
+#include "Lib.h"
 #include <windows.h>
 #include <stdio.h>
 

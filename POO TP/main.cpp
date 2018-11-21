@@ -35,6 +35,15 @@ int main() {
 		}
 
 		Consola::clrscr();
+		config c;
+		switch (valor) {
+
+		case 1: c.conf(valor);
+			break;
+		case 2: c.conf(valor);
+			break;
+		case 3: exit(0);
+		}
 	}
 }
 
