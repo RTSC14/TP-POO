@@ -11,5 +11,9 @@
 #include <cmath>
 
 #include "Consola.h"
+#include "opcoes.h"
+#include "mundo.h"
+#include "barcos.h"
+#include "portos.h"
 
 using namespace std;
