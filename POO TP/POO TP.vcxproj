@@ -20,15 +20,27 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="config.h" />
+    <ClInclude Include="barcos.h" />
     <ClInclude Include="Consola.h" />
+    <ClInclude Include="Interface.h" />
     <ClInclude Include="Lib.h" />
     <ClInclude Include="Mapa.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="config.cpp" />
+    <ClInclude Include="mundo.h" />
+    <ClInclude Include="opcoes.h" />
+    <ClInclude Include="portos.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="barcos.cpp" />
     <ClCompile Include="Consola.cpp" />
+    <ClCompile Include="Interface.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mapa.cpp" />
+    <ClCompile Include="mundo.cpp" />
+    <ClCompile Include="opcoes.cpp" />
+    <ClCompile Include="portos.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
