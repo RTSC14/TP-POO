@@ -1,5 +1,4 @@
-#include "Interface.h"
-#include "Mapa.h"
+#include "Lib.h"
 
 
 Interface::Interface(Mapa * m) {
@@ -19,8 +18,6 @@ void Interface::corre() {
 
 	int x = 0;
 	int y = 2;
-
-	mundo->acrescentaMigalhas();
 
 	while (true) {
 
@@ -73,7 +70,7 @@ void Interface::corre() {
 				}
 				else {
 					if (str.compare("compranav") == 0 ) {
-						
+						mapa->compranav();
 					}
 					else {
 						if (str.compare("vendenav") == 0 ) {
@@ -126,7 +123,7 @@ void Interface::corre() {
 					}
 					else {
 						if (str.compare("compra") == 0 ) {
-							
+				
 						}
 						else if (str.compare("move") == 0 ) {
 							

@@ -1,8 +1,11 @@
 #pragma once
 class Interface
 {
+	Mapa *mapa;
+
 public:
-	Interface();
+	Interface(Mapa *m);
+	void corre();
 	~Interface();
 };
 
