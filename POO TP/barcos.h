@@ -1,4 +1,5 @@
 #pragma once
+#include "Lib.h"
 class barcos
 {
 	int id;

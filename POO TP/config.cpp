@@ -19,77 +19,94 @@ void config::conf(int valor)
 		probmotim = 20;
 	if (valor == 1)
 	{
-		string fmapa,
-		    nmoedas,
-			nprobpirata,
-			npreconavio,
-			nprecosoldado,
-			nprecovendpeixe,
-			nprecocompmerc,
-			nprecovendmerc,
-			nsoldadosporto,
-			nprobevento,
-			nprobtempestade,
-			nprobsereias,
-			nprobcalmaria,
-			nprobmotim;
+		string fmapa;
+		int nmoedas = -1000,
+			nprobpirata = -1000,
+			npreconavio = -1000,
+			nprecosoldado = -1000,
+			nprecovendpeixe = -1000,
+			nprecocompmerc = -1000,
+			nprecovendmerc = -1000,
+			nsoldadosporto = -1000,
+			nprobevento = -1000,
+			nprobtempestade = -1000,
+			nprobsereias = -1000,
+			nprobcalmaria = -1000,
+			nprobmotim = -1000,
+			x,
+			y;
 		cout << "Insira o nome do ficheiro do mapa: ";
 		cin >> fmapa;
+		string line;
+		string item1, item2, lixo;
+
+		ifstream input_file(fmapa);
+		getline(input_file, item1);
+		istringstream iss1(item1);
+		iss1 >> lixo;
+		iss1 >> x;
+		getline(input_file, item2);
+		istringstream iss2(item1);
+		iss2 >> lixo;
+		iss2>> y;
+		while (input_file.eof() == false) {
+			getline(input_file, line);
+		}
 		cout << "CONFIGURACAO" << endl;
 		fflush(stdin);
 		cout << "Numero de moedas iniciais (default: 1000): ";
-		getline(cin, nmoedas);
-		if (nmoedas.compare("") == 0)
+		cin >> nmoedas;
+		if (nmoedas != -1000)
 			nmoedas = moedas;
 		cout << "Probabilidade de surgir um barco pirata num turno (default: 20%): ";
-		getline(cin, nprobpirata);
-		if (nprobpirata.compare("") == 0)
+		cin >> nprobpirata;
+		if (nprobpirata != -1000)
 			nprobpirata = probpirata;
 		cout << "Preco dos navios (default: 100): ";
-		getline(cin, npreconavio);
-		if (npreconavio.compare("") == 0)
+		cin >> npreconavio;
+		if (npreconavio != -1000)
 			npreconavio = preconavio;
 		cout << "Preco dos soldados (default: 1): ";
-		getline(cin, nprecosoldado);
-		if (nprecosoldado.compare("") == 0)
+		cin >> nprecosoldado;
+		if (nprecosoldado != -1000)
 			nprecosoldado = precosoldado;
 		cout << "Preco da venda de mercadoria (default: 1): ";
-		getline(cin, nprecovendmerc);
-		if (nprecovendpeixe.compare("") == 0)
+		cin >> nprecovendmerc;
+		if (nprecovendpeixe != -1000)
 			nprecovendpeixe = precovendpeixe;
 		cout << "Preco da compra de mercadorias (deafult: 2): ";
-		getline(cin, nprecocompmerc);
-		if (nprecocompmerc.compare("") == 0)
+		cin >> nprecocompmerc;
+		if (nprecocompmerc != -1000)
 			nprecocompmerc = precocompmerc;
 		cout << "Preco da venda de mercadorias (default: 3): ";
-		getline(cin, nprecovendmerc);
-		if (nprecovendmerc.compare("") == 0)
+		cin >> nprecovendmerc;
+		if (nprecovendmerc != -1000)
 			nprecovendmerc = precovendmerc;
 		cout << "Numero de soldados de um porto: (default: 100)";
-		getline(cin, nsoldadosporto);
-		if (nsoldadosporto.compare("") == 0)
+		cin >> nsoldadosporto;
+		if (nsoldadosporto != -1000)
 			nsoldadosporto = soldadosporto;
 		cout << "Probabilidade de ocorrer um evento num turno (default: 30%): ";
-		getline(cin, nprobevento);
-		if (nprobevento.compare("") == 0)
+		cin >> nprobevento;
+		if (nprobevento != -1000)
 			nprobevento = probevento;
 		cout << "Probabilidade de tempestade (default: 30%): ";
-		getline(cin, nprobtempestade);
-		if (nprobtempestade.compare("") == 0)
+		cin >> nprobtempestade;
+		if (nprobtempestade != -1000)
 			nprobtempestade = probtempestade;
 		cout << "Probabilidade de sereias (default: 30%): ";
-		getline(cin, nprobsereias);
-		if (nprobsereias.compare("") == 0)
+		cin >> nprobsereias;
+		if (nprobsereias != -1000)
 			nprobsereias = probsereias;
 		cout << "Probabilidade de calmaria (default: 20%): ";
-		getline(cin, nprobcalmaria);
-		if (nprobcalmaria.compare("") == 0)
+		cin >> nprobcalmaria;
+		if (nprobcalmaria != -1000)
 			nprobcalmaria = probcalmaria;
 		cout << "Probabilidade de motim (default: 20%): ";
-		getline(cin, nprobmotim);
-		if (nprobmotim.compare("") == 0)
+		cin >> nprobmotim;
+		if (nprobmotim != -1000)
 			nprobmotim = probmotim;
-		Mapa *map = new Mapa(nmoedas, nprobpirata, npreconavio, nprecosoldado, nprecovendpeixe, nprecocompmerc, nprecovendmerc, nsoldadosporto, nprobevento, nprobtempestade, nprobsereias, nprobcalmaria, nprobmotim);
+		Mapa *map = new Mapa(nmoedas, nprobpirata, npreconavio, nprecosoldado, nprecovendpeixe, nprecocompmerc, nprecovendmerc, nsoldadosporto, nprobevento, nprobtempestade, nprobsereias, nprobcalmaria, nprobmotim, line, x, y);
 		Interface inter(map);
 		inter.corre();
 	}

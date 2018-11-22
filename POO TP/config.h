@@ -1,4 +1,6 @@
 #pragma once
+#include "Lib.h"
+class Mapa;
 class config
 {
 public:

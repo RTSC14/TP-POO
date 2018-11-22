@@ -7,7 +7,6 @@
     <ClCompile Include="Interface.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mapa.cpp" />
-    <ClCompile Include="opcoes.cpp" />
     <ClCompile Include="portos.cpp" />
     <ClCompile Include="jogador.cpp" />
   </ItemGroup>
@@ -18,7 +17,6 @@
     <ClInclude Include="Interface.h" />
     <ClInclude Include="Lib.h" />
     <ClInclude Include="Mapa.h" />
-    <ClInclude Include="opcoes.h" />
     <ClInclude Include="portos.h" />
     <ClInclude Include="jogador.h" />
   </ItemGroup>
