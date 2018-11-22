@@ -29,7 +29,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="config.cpp" />
-    <ClInclude Include="opcoes.h" />
     <ClInclude Include="portos.h" />
   </ItemGroup>
   <ItemGroup>
@@ -39,7 +38,6 @@
     <ClCompile Include="jogador.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mapa.cpp" />
-    <ClCompile Include="opcoes.cpp" />
     <ClCompile Include="portos.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

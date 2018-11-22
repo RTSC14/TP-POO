@@ -2,7 +2,7 @@
 
 
 Interface::Interface(Mapa * m) {
-	mapa = m;
+	map = m;
 }
 
 void Interface::corre() {
@@ -50,7 +50,7 @@ void Interface::corre() {
 				}
 				else {
 					if (str.compare("sair") == 0) {
-						delete Mapa;
+						delete map;
 						exit(0);
 					}
 				}
@@ -70,7 +70,7 @@ void Interface::corre() {
 				}
 				else {
 					if (str.compare("compranav") == 0 ) {
-						mapa->compranav();
+						map->compranav();
 					}
 					else {
 						if (str.compare("vendenav") == 0 ) {
@@ -165,10 +165,7 @@ void Interface::corre() {
 								iss >> num3;
 								if (!iss.fail()) {
 									if (str.compare("criaf") == 0 && num > 0 && (c == 'E' || c == 'C' || c == 'V' || c == 'A' || c == 'H')) {
-										if (Mapa->existeNinhoID(num3) == true) {
-											Mapa->trataFormiga(num, num3, c);
-											imprime();
-										}
+										
 									}
 									else {
 										printf("Erro de sintaxe");
@@ -193,11 +190,8 @@ void Interface::corre() {
 									if (!iss.fail()) {
 										iss >> num3;
 										if (!iss.fail()) {
-											if (str.compare("cria1") == 0 && (c == 'E' || c == 'C' || c == 'V' || c == 'A' || c == 'H') && num > 0 && num2 >= 0 && num2 < mundo->getDim() && num3 >= 0 && num3 < mundo->getDim()) { // CONDITIONSSSSS
-												if (Mapa->existeNinhoID(num)) {
-													Mapa->acrescentaFormiga(c, num, num2, num3);
-													imprime();
-												}
+											if (str.compare("cria1") == 0 ) { // CONDITIONSSSSS
+												
 											}
 										}
 									}
@@ -212,6 +206,46 @@ void Interface::corre() {
 	}
 }
 
+
+void Interface::imprime() {
+
+	int flag = 0;
+	int x = 65;
+	int y = 5;
+	int xi = 65;
+	int yi = 5;
+	int itt = 0;
+
+	while (x < map->getX() + xi && y < map->getY() + yi) {
+		Consola::setTextColor(Consola::AMARELO);
+		//imprime reguas
+		if (itt == 0) {
+			Consola::gotoxy(x + itt * 2 - 5, y);
+			cout << y - yi;
+		}
+		if (yi - y == 0) {
+			Consola::gotoxy(x + itt * 2, y - 2);
+			cout << itt;
+		}
+		//end reguas
+		Consola::gotoxy(x + itt * 2, y);
+		flag = 0;
+
+		if (flag == 0) {
+			cout << "*";
+		}
+
+		if (x - xi == map->getX() - 1) {
+			x = xi - 1;
+			itt = -1;
+			y++;
+		}
+		x++;
+		itt++;
+		Consola::setBackgroundColor(Consola::PRETO);
+	}
+	Consola::setTextColor(Consola::VERDE);
+}
 
 
 Interface::~Interface()

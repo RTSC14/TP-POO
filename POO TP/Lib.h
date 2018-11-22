@@ -10,14 +10,12 @@
 #include <fstream>
 #include <cmath>
 
+using namespace std;
+
 #include "Consola.h"
 #include "Mapa.h"
 #include "config.h"
-#include "opcoes.h"
 #include "barcos.h"
 #include "portos.h"
 #include "Interface.h"
 #include "jogador.h"
-
-
-using namespace std;
