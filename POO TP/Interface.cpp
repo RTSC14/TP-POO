@@ -1,5 +1,4 @@
-#include "Interface.h"
-#include "Mapa.h"
+#include "Lib.h"
 
 
 Interface::Interface(Mapa * m) {
@@ -19,8 +18,6 @@ void Interface::corre() {
 
 	int x = 0;
 	int y = 2;
-
-	mundo->acrescentaMigalhas();
 
 	while (true) {
 
@@ -53,7 +50,7 @@ void Interface::corre() {
 				}
 				else {
 					if (str.compare("sair") == 0) {
-						delete mundo;
+						delete Mapa;
 						exit(0);
 					}
 				}
@@ -168,8 +165,8 @@ void Interface::corre() {
 								iss >> num3;
 								if (!iss.fail()) {
 									if (str.compare("criaf") == 0 && num > 0 && (c == 'E' || c == 'C' || c == 'V' || c == 'A' || c == 'H')) {
-										if (mundo->existeNinhoID(num3) == true) {
-											mundo->trataFormiga(num, num3, c);
+										if (Mapa->existeNinhoID(num3) == true) {
+											Mapa->trataFormiga(num, num3, c);
 											imprime();
 										}
 									}
@@ -197,8 +194,8 @@ void Interface::corre() {
 										iss >> num3;
 										if (!iss.fail()) {
 											if (str.compare("cria1") == 0 && (c == 'E' || c == 'C' || c == 'V' || c == 'A' || c == 'H') && num > 0 && num2 >= 0 && num2 < mundo->getDim() && num3 >= 0 && num3 < mundo->getDim()) { // CONDITIONSSSSS
-												if (mundo->existeNinhoID(num)) {
-													mundo->acrescentaFormiga(c, num, num2, num3);
+												if (Mapa->existeNinhoID(num)) {
+													Mapa->acrescentaFormiga(c, num, num2, num3);
 													imprime();
 												}
 											}

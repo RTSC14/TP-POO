@@ -28,7 +28,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="config.cpp" />
-    <ClInclude Include="mundo.h" />
     <ClInclude Include="opcoes.h" />
     <ClInclude Include="portos.h" />
   </ItemGroup>
@@ -38,7 +37,6 @@
     <ClCompile Include="Interface.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mapa.cpp" />
-    <ClCompile Include="mundo.cpp" />
     <ClCompile Include="opcoes.cpp" />
     <ClCompile Include="portos.cpp" />
   </ItemGroup>
