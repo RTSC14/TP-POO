@@ -7,5 +7,6 @@ public:
 	Interface(Mapa *m);
 	void corre();
 	~Interface();
+	void corre();
 };
 

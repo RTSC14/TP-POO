@@ -89,6 +89,9 @@ void config::conf(int valor)
 		getline(cin, nprobmotim);
 		if (nprobmotim.compare("") == 0)
 			nprobmotim = probmotim;
+		Mapa *map = new Mapa(nmoedas, nprobpirata, npreconavio, nprecosoldado, nprecovendpeixe, nprecocompmerc, nprecovendmerc, nsoldadosporto, nprobevento, nprobtempestade, nprobsereias, nprobcalmaria, nprobmotim);
+		Interface inter(map);
+		inter.corre();
 	}
 	else if (valor == 2)
 	{
