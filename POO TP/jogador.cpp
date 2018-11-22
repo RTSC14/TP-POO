@@ -4,7 +4,7 @@
 
 jogador::jogador(int moedasini)
 {
-	moedas = moedasini;
+	this->moedas = moedasini;
 
 }
 

@@ -1,7 +1,7 @@
 #pragma once
 class Mapa
 {
-	jogador *jog = new jogador(nmoedas);
+	jogador *jog;
 
 	public:
 		static int id_mapa;

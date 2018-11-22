@@ -1,9 +1,7 @@
 #include "Lib.h"
 
-class jogador;
-
 Mapa::Mapa() {
-	
+	this->jog = new jogador(nmoedas);
 }
 
 void Mapa::carregaMapa()
@@ -19,8 +17,8 @@ void Mapa::carregaMapa()
 }
 
 void Mapa::compranav() {
-	if (jogador->getmoedas() >= mapa->getPrecoNav()) {
-		jogador->setmoedas(jogador->getmoedas() - mapa->getPrecoNav());
-		jogador->addnav()
+	if (jog->getmoedas() >= mapa.getPrecoNav()) {
+		jog->setmoedas(jog->getmoedas() - mapa->getPrecoNav());
+		jog->addnav();
 	}
 }
