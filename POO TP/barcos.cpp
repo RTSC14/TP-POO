@@ -1,6 +1,6 @@
 #include "Lib.h"
 
-barcos::barcos()
+barcos::barcos(int xx, int yy, char tipo)
 {
 }
 

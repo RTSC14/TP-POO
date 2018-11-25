@@ -70,7 +70,7 @@ void config::conf(int valor)
 		cin >> nprecosoldado;
 		if (nprecosoldado != -1000)
 			nprecosoldado = precosoldado;
-		cout << "Preco da venda de mercadoria (default: 1): ";
+		cout << "Preco da venda de peixe (default: 1): ";
 		cin >> nprecovendmerc;
 		if (nprecovendpeixe != -1000)
 			nprecovendpeixe = precovendpeixe;
@@ -82,7 +82,7 @@ void config::conf(int valor)
 		cin >> nprecovendmerc;
 		if (nprecovendmerc != -1000)
 			nprecovendmerc = precovendmerc;
-		cout << "Numero de soldados de um porto: (default: 100)";
+		cout << "Numero de soldados de um porto: (default: 100): ";
 		cin >> nsoldadosporto;
 		if (nsoldadosporto != -1000)
 			nsoldadosporto = soldadosporto;

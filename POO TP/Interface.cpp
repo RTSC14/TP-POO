@@ -208,7 +208,6 @@ void Interface::corre() {
 
 
 void Interface::imprime() {
-
 	int flag = 0;
 	int x = 65;
 	int y = 5;
@@ -232,9 +231,25 @@ void Interface::imprime() {
 		flag = 0;
 
 		if (flag == 0) {
-			cout << "*";
-		}
+			//cout << "*";
+			string line;
+			string item1, item2, lixo;
 
+			ifstream input_file("exemplo.txt");
+			getline(input_file, item1);
+			istringstream iss1(item1);
+			iss1 >> lixo;
+			iss1 >> x;
+			getline(input_file, item2);
+			istringstream iss2(item1);
+			iss2 >> lixo;
+			iss2 >> y;
+			while (input_file.eof() == false) {
+				getline(input_file, line);
+				cout << line << endl;
+			}
+			break;
+		}
 		if (x - xi == map->getX() - 1) {
 			x = xi - 1;
 			itt = -1;
