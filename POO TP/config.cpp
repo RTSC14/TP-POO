@@ -37,7 +37,7 @@ void config::conf(int valor)
 			y;
 		cout << "Insira o nome do ficheiro do mapa: ";
 		cin >> fmapa;
-		string line;
+		string line, temp;
 		string item1, item2, lixo;
 
 		ifstream input_file(fmapa);
@@ -46,14 +46,14 @@ void config::conf(int valor)
 		iss1 >> lixo;
 		iss1 >> x;
 		getline(input_file, item2);
-		istringstream iss2(item1);
+		istringstream iss2(item2);
 		iss2 >> lixo;
 		iss2>> y;
 		while (input_file.eof() == false) {
-			getline(input_file, line);
+			getline(input_file, temp);
+			line = line + temp;
 		}
 		cout << "CONFIGURACAO" << endl;
-		fflush(stdin);
 		cout << "Numero de moedas iniciais (default: 1000): ";
 		cin >> nmoedas;
 		if (nmoedas != -1000)

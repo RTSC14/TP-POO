@@ -9,6 +9,9 @@
 #include <time.h>
 #include <fstream>
 #include <cmath>
+#include <cstring>
+#include <cassert>
+#include <iterator>
 
 using namespace std;
 

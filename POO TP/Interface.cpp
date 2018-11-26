@@ -208,14 +208,19 @@ void Interface::corre() {
 
 
 void Interface::imprime() {
-	int flag = 0;
 	int x = 65;
 	int y = 5;
 	int xi = 65;
 	int yi = 5;
 	int itt = 0;
+	int chitt = 0;
 
-	while (x < map->getX() + xi && y < map->getY() + yi) {
+	string mapa = map->getMap();
+	char chMap[1024];
+
+	strcpy_s(chMap, mapa.c_str());
+
+	while (x < map->getY() + xi && y < map->getX() + yi) {
 		Consola::setTextColor(Consola::AMARELO);
 		//imprime reguas
 		if (itt == 0) {
@@ -228,35 +233,32 @@ void Interface::imprime() {
 		}
 		//end reguas
 		Consola::gotoxy(x + itt * 2, y);
-		flag = 0;
 
-		if (flag == 0) {
-			//cout << "*";
-			string line;
-			string item1, item2, lixo;
+		cout << chMap[chitt];
+		/*for (Elementos* a : aux) {//ve todos os elementos
+			if (a->getPosX() + xi == x && a->getPosY() + yi == y) { // verifica se o elemento está na posição onde o corsor está
+				if (mundo->ocupaPos2(a->getPosX(), a->getPosY()) == false || a->getDenom() == 'N') { //verifica se a posição ja está ocupada
+					flag = 1;
+					Consola::setTextColor(a->getIDCor() + 1);
 
-			ifstream input_file("exemplo.txt");
-			getline(input_file, item1);
-			istringstream iss1(item1);
-			iss1 >> lixo;
-			iss1 >> x;
-			getline(input_file, item2);
-			istringstream iss2(item1);
-			iss2 >> lixo;
-			iss2 >> y;
-			while (input_file.eof() == false) {
-				getline(input_file, line);
-				cout << line << endl;
+					if (a->getEnergia() > a->getEnergiaInicial()*.5) {
+						cout << a->getDenom();
+					}
+					else {
+						putchar(tolower(a->getDenom()));
+					}
+				}
 			}
-			break;
-		}
-		if (x - xi == map->getX() - 1) {
+		}*/
+
+		if (x - xi == map->getY() - 1) {
 			x = xi - 1;
 			itt = -1;
 			y++;
 		}
 		x++;
 		itt++;
+		chitt++;
 		Consola::setBackgroundColor(Consola::PRETO);
 	}
 	Consola::setTextColor(Consola::VERDE);

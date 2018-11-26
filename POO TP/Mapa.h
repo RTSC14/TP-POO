@@ -33,5 +33,6 @@ class Mapa
 		~Mapa();
 		int getX();
 		int getY();
+		string getMap();
 };
 

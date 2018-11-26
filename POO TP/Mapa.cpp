@@ -28,6 +28,10 @@ int Mapa::getY() {
 	return y;
 }
 
+string Mapa::getMap() {
+	return map;
+}
+
 void Mapa::compranav() {
 	/*if (jog->getmoedas() >= mapa.getPrecoNav()) {
 		jog->setmoedas(jog->getmoedas() - mapa->getPrecoNav());
