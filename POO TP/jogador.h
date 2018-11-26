@@ -8,7 +8,7 @@ class Mapa;
 
 class jogador
 {
-	int moedas;
+	int moedas, nbarcos = 4;
 	vector<barcos*> vbarcos;
 
 public:
@@ -16,6 +16,8 @@ public:
 
 	int getmoedas();
 	void setmoedas(int nmoedas);
+	int setNumnav(int numbarcos);
+	int addnav();
 
 	~jogador();
 };

@@ -32,11 +32,20 @@ string Mapa::getMap() {
 	return map;
 }
 
+int Mapa::getPrecoNav()
+{
+	return preconavio;
+}
+
 void Mapa::compranav() {
-	/*if (jog->getmoedas() >= mapa.getPrecoNav()) {
-		jog->setmoedas(jog->getmoedas() - mapa->getPrecoNav());
+	if (jog->getmoedas() >= preconavio) {
+		jog->setmoedas(jog->getmoedas() - preconavio);
 		jog->addnav();
-	}*/
+	}
+	else
+	{
+		cout << "\nNao tem moedas suficientes para comprar um navio!\n";
+	}
 }
 
 Mapa::~Mapa() {

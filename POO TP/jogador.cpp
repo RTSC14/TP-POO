@@ -15,6 +15,18 @@ void jogador::setmoedas(int nmoedas) {
 	moedas = nmoedas;
 }
 
+int jogador::setNumnav(int numbarcos)
+{
+	return numbarcos;
+}
+
+int jogador::addnav(void)
+{
+	nbarcos=setNumnav(nbarcos + 1);
+	cout << "\nTem " << nbarcos << " navios";
+	return nbarcos;
+}
+
 jogador::~jogador()
 {
 }

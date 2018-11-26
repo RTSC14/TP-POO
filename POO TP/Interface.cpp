@@ -168,7 +168,7 @@ void Interface::corre() {
 										
 									}
 									else {
-										printf("Erro de sintaxe");
+										cout << "Erro de sintaxe";
 									}
 
 								}

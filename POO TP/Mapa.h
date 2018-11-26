@@ -34,5 +34,6 @@ class Mapa
 		int getX();
 		int getY();
 		string getMap();
+		int getPrecoNav();
 };
 
