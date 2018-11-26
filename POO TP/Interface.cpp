@@ -235,21 +235,6 @@ void Interface::imprime() {
 		Consola::gotoxy(x + itt * 2, y);
 
 		cout << chMap[chitt];
-		/*for (Elementos* a : aux) {//ve todos os elementos
-			if (a->getPosX() + xi == x && a->getPosY() + yi == y) { // verifica se o elemento está na posição onde o corsor está
-				if (mundo->ocupaPos2(a->getPosX(), a->getPosY()) == false || a->getDenom() == 'N') { //verifica se a posição ja está ocupada
-					flag = 1;
-					Consola::setTextColor(a->getIDCor() + 1);
-
-					if (a->getEnergia() > a->getEnergiaInicial()*.5) {
-						cout << a->getDenom();
-					}
-					else {
-						putchar(tolower(a->getDenom()));
-					}
-				}
-			}
-		}*/
 
 		if (x - xi == map->getY() - 1) {
 			x = xi - 1;
