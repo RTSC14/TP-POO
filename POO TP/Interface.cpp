@@ -164,7 +164,7 @@ void Interface::corre() {
 							if (!iss.fail()) {
 								iss >> num3;
 								if (!iss.fail()) {
-									if (str.compare("criaf") == 0 && num > 0 && (c == 'E' || c == 'C' || c == 'V' || c == 'A' || c == 'H')) {
+									if (str.compare("commando") == 0) {
 										
 									}
 									else {
