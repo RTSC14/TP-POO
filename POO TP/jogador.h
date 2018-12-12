@@ -17,7 +17,7 @@ public:
 	int getmoedas();
 	void setmoedas(int nmoedas);
 	int setNumnav(int numbarcos);
-	int addnav();
+	int addnav(char tipo);
 
 	~jogador();
 };

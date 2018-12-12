@@ -19,6 +19,7 @@ void Interface::corre() {
 	int x = 0;
 	int y = 2;
 
+	char tipo;
 	while (true) {
 
 		imprime();
@@ -64,13 +65,14 @@ void Interface::corre() {
 				Consola::clrscr();
 				Consola::gotoxy(0, 2);
 				iss >> str;
-				iss >> num;
+				iss >> tipo;
 				if (iss.fail()) {
 					iss >> str2;
 				}
 				else {
 					if (str.compare("compranav") == 0 ) {
-						map->compranav();
+						map->compranav(tipo);
+						
 					}
 					else {
 						if (str.compare("vendenav") == 0 ) {

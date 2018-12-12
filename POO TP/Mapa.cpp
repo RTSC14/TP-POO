@@ -37,10 +37,10 @@ int Mapa::getPrecoNav()
 	return preconavio;
 }
 
-void Mapa::compranav() {
+void Mapa::compranav(char tipo) {
 	if (jog->getmoedas() >= preconavio) {
 		jog->setmoedas(jog->getmoedas() - preconavio);
-		jog->addnav();
+		jog->addnav(tipo);
 	}
 	else
 	{
